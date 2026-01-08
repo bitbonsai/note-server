@@ -1,6 +1,15 @@
-# Share Note backend server
+# Share Note backend server (Custom Fork)
 
-Backend server for [Share Note](https://github.com/alangrainger/share-note/).
+Custom fork of the backend server for [Share Note](https://github.com/alangrainger/share-note/).
+
+## Customizations in this fork
+
+- **Removed status bar**: Footer with "Share Note for Obsidian" link and theme toggle removed from note template
+- **Banner plugin support**: Added CSS for Obsidian banner plugin compatibility
+- **Security fix**: Field name sanitization in SQL queries to prevent injection attacks
+- **Local build**: Configured for local Docker builds instead of using pre-built images
+
+For the original upstream project, see [note-sx/server](https://github.com/note-sx/server).
 
 ## Change your Obsidian plugin to point to your server
 
@@ -10,10 +19,13 @@ This file will sync to all your devices using your normal sync method, so all yo
 
 ## Run with Docker
 
-1. Take a copy of the [docker-compose.yml](https://github.com/note-sx/server/blob/main/docker-compose.yml) file
-2. Take a copy of the [example env file](https://github.com/note-sx/server/blob/main/.env.example) and save as `.env`
-3. Update the `.env` options as below
-4. `docker-compose up -d`
+1. Clone this repository: `git clone https://github.com/bitbonsai/note-server.git`
+2. Navigate to the directory: `cd note-server`
+3. Copy the example env file: `cp .env.example .env`
+4. Update the `.env` options as below (especially `BASE_WEB_URL` and `HASH_SALT`)
+5. Build and start: `docker-compose build && docker-compose up -d`
+
+**Note**: This fork builds the Docker image locally from source instead of using a pre-built image. To update after pulling new changes: `git pull && docker-compose build && docker-compose up -d`
 
 ## `.env` options
 
