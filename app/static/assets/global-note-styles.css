@@ -14,3 +14,8 @@ div.view-content {
 .force-cursor {
     cursor: pointer !important;
 }
+
+.mod-header:has(+ .obsidian-banner-wrapper) {
+    padding-top: var(--banner-height);
+    margin-bottom: calc(-1 * var(--banner-height));
+}
