@@ -3,6 +3,7 @@
 .env.local
 .env.production
 .idea
+.claude
 database.db*
 backup.sqlite
 /userfiles/css/*
