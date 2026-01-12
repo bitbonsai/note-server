@@ -62,9 +62,18 @@ This file will sync to all your devices using your normal sync method, so all yo
 2. Navigate to the directory: `cd note-server`
 3. Copy the example env file: `cp .env.example .env`
 4. Update the `.env` options as below (especially `BASE_WEB_URL` and `HASH_SALT`)
-5. Build and start: `docker-compose build && docker-compose up -d`
+5. Build and start: `docker compose build && docker compose up -d`
 
-**Note**: This fork builds the Docker image locally from source instead of using a pre-built image. To update after pulling new changes: `git pull && docker-compose build && docker-compose up -d`
+**Note**: This fork builds the Docker image locally from source instead of using a pre-built image. To update after pulling new changes: `git pull && docker compose build && docker compose up -d`
+
+**Note**: Modern Docker uses `docker compose` (without hyphen) instead of the older `docker-compose` command.
+
+### Useful Docker commands
+
+- **Restart the server**: `docker compose restart`
+- **Stop the server**: `docker compose down`
+- **View logs**: `docker compose logs -f`
+- **Rebuild and restart**: `docker compose build && docker compose up -d`
 
 ## `.env` options
 
