@@ -20,3 +20,20 @@ div.view-content {
     margin-bottom: calc(-1 * var(--banner-height));
     margin-top: unset;
 }
+
+/* Code Styler plugin support */
+.code-styler-line {
+    display: flex;
+    align-items: flex-start;
+}
+
+.code-styler-line-number {
+    flex-shrink: 0;
+    margin-right: 1em;
+    user-select: none;
+}
+
+.code-styler-line-text {
+    flex: 1;
+    min-width: 0;
+}
