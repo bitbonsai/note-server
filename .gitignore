@@ -1,5 +1,7 @@
 ﻿node_modules
 .env
+.env.local
+.env.production
 .idea
 database.db*
 backup.sqlite

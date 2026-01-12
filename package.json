@@ -1,0 +1,10 @@
+{
+  "name": "note-server",
+  "version": "1.0.0",
+  "description": "Share Note backend server",
+  "scripts": {
+    "dev": "bash scripts/dev-env.sh switch --env local",
+    "prod": "bash scripts/dev-env.sh switch --env production"
+  },
+  "private": true
+}
